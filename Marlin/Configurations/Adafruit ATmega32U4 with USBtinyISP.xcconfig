@@ -1,0 +1,64 @@
+//
+//  Adafruit ATmega32U4 with USBtinyISP.xcconfig 
+//  Board config file
+//  ----------------------------------
+//  Developed with embedXcode
+//
+//  Part of embedXcode
+//  Embedded Computing on Xcode
+//
+//  Created by Rei Vilo on Aug 29, 2012
+//  Copyright © 2012-2013 http://embedxcode.weebly.com
+//  All rights reserved
+//
+// Last update: Nov 08, 2013 release 112
+
+// Board identifier
+// See Boards.txt for <tag>.name=Arduino Uno (16 MHz)
+//
+BOARD_TAG  = leonardo
+
+// Port (optionnal)
+// most common are /dev/tty.usbserial*, /dev/tty.usbmodem* or /dev/tty.uart*
+//
+BOARD_PORT = /dev/tty.usbmodem*
+
+// References for Xcode code-sense
+// See Boards.txt for <tag>.build.mcu=<GCC_PREPROCESSOR_DEFINITIONS>
+//
+GCC_PREPROCESSOR_DEFINITIONS = __AVR_ATmega32U4__ ARDUINO
+
+// Specify ARDUINO_APP for Arduino, MPIDE_APP for Mpide,
+//   DIGISPARK_APP for Digispark, ENERGIA_APP for Energia,
+//   MAPLE_APP for MapleIDE, TEENSY_APP for Teensy,
+//   WIRING_APP for Wiring
+//
+HEADER_SEARCH_PATHS = $(ARDUINO_APP)/** $(SKETCHBOOK_DIR)/Libraries/**
+
+// Maximum RAM size in bytes
+// given by <tag>.upload.maximum_ram_size in boards.txt for Maple and Teensy
+//
+MAX_RAM_SIZE = 2560
+
+// Specific programmer options, no port
+//
+AVRDUDE_PROGRAMMER = usbtiny
+AVRDUDE_OTHER_OPTIONS = -v
+
+// MCU for AVRDUDE
+// If not specified, AVRDUDE_MCU = value from boards.txt
+//
+AVRDUDE_MCU = atmega328
+
+// Although compatible, the actual MCU may have a different speed.
+// If not specified, F_CPU = value from boards.txt
+//
+//F_CPU = 16000000L
+
+// Fuses for AVRDUDE
+// To by-pass fuses, set AVR_IGNORE_FUSES = 1 otherwise AVR_IGNORE_FUSES = 0
+//AVR_IGNORE_FUSES = 1
+
+// Define fuses, only if different from default values
+//ISP_LOCK_FUSE_PRE ISP_LOCK_FUSE_POST ISP_HIGH_FUSE ISP_LOW_FUSE ISP_EXT_FUSE
+

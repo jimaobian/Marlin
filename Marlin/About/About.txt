@@ -1,0 +1,15 @@
+ 	
+	embedXcode
+	embedXcode+
+	----------------------------------
+	Embedded Computing on Xcode
+	
+	
+	© Rei VILO, 2010-2013
+	All rights reserved	
+	http://embedXcode.weebly.com/
+	
+	
+embedXcode  • Nov 08, 2013 release 112 • Stability enhancement for Digispark
+embedXcode+ • Nov 09, 2013 release 113 • Support for Protostack 28-pin AVR board, USBtinyISP and USBASP programmers, stability enhancement
+	
